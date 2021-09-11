@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "white-space-eraser-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/spaceEraser/SpaceEraserWebPart.js",
+          "manifest": "./src/webparts/spaceEraser/SpaceEraserWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "SpaceEraserWebPartStrings": "lib/webparts/spaceEraser/loc/{locale}.js"
+  }
+}
