@@ -1,9 +1,24 @@
 @import '~office-ui-fabric-react/dist/sass/References.scss';
-
-.spaceEraser {
+.spaceEraser{
+  text-align: center;  
+}
+.spaceEraser.read{
   margin: 0;
   padding: 0;
   height: 0;
   width: 0;
   display: none;
+}
+
+.previous.prevMargin{
+  margin-bottom: 0 !important;
+}
+.previous.prevPadding{
+  padding-bottom: 0 !important;
+}
+.next.nextMargin {
+  margin-top: 0 !important;
+}
+.next.nextPadding{
+  padding-top: 0 !important;
 }

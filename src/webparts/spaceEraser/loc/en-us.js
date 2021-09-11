@@ -1,7 +1,8 @@
 define([], function() {
   return {
-    "PropertyPaneDescription": "Description",
-    "BasicGroupName": "Group Name",
-    "DescriptionFieldLabel": "Description Field"
+    "PropertyPaneDescription": "Configure this webpart and take back control of your white space!",
+    "BasicGroupName": "Options",
+    "RemoveMarginsFieldLabel": "Remove Margins",
+    "RemovePaddingFieldLabel": "Remove Padding",
   }
 });

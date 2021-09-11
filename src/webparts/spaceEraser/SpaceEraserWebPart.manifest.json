@@ -19,9 +19,10 @@
     "group": { "default": "Other" },
     "title": { "default": "Space Eraser" },
     "description": { "default": "Place between two other webparts on a page to remove the margins immediately above and below." },
-    "officeFabricIconFontName": "Page",
+    "officeFabricIconFontName": "EraseTool",
     "properties": {
-      "description": "Space Eraser"
+      "removeMargins": true,
+      "removePadding": true
     }
   }]
 }

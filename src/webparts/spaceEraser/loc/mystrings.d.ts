@@ -1,7 +1,8 @@
 declare interface ISpaceEraserWebPartStrings {
   PropertyPaneDescription: string;
   BasicGroupName: string;
-  DescriptionFieldLabel: string;
+  RemoveMarginsFieldLabel: string;
+  RemovePaddingFieldLabel: string;
 }
 
 declare module 'SpaceEraserWebPartStrings' {

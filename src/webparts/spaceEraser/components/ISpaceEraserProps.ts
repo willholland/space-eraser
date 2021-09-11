@@ -1,3 +1,7 @@
+import { DisplayMode } from '@microsoft/sp-core-library';
+
 export interface ISpaceEraserProps {
-  description: string;
+  displayMode: DisplayMode;
+  removeMargins: Boolean;
+  removePadding: Boolean;
 }

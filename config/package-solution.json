@@ -1,21 +1,21 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "white-space-eraser-client-side-solution",
+    "name": "The Space Eraser webpart",
     "id": "d7bd7357-15e4-4e16-a625-fe19450a6501",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,
     "developer": {
-      "name": "",
-      "websiteUrl": "",
-      "privacyUrl": "",
-      "termsOfUseUrl": "",
+      "name": "William Holland (ThreeWill, LLC)",
+      "websiteUrl": "https://threewill.com/",
+      "privacyUrl": "https://threewill.com/website/threewill-privacy-statement/",
+      "termsOfUseUrl": "https://threewill.com/website/terms-of-use/",
       "mpnId": ""
     }
   },
   "paths": {
-    "zippedPackage": "solution/white-space-eraser.sppkg"
+    "zippedPackage": "solution/space-eraser.sppkg"
   }
 }

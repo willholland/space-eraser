@@ -3,7 +3,9 @@ import * as ReactDom from 'react-dom';
 import { Version } from '@microsoft/sp-core-library';
 import {
   IPropertyPaneConfiguration,
-  PropertyPaneTextField
+  PropertyPaneCheckbox,
+  PropertyPaneTextField,
+  PropertyPaneToggle
 } from '@microsoft/sp-property-pane';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 
@@ -12,7 +14,8 @@ import SpaceEraser from './components/SpaceEraser';
 import { ISpaceEraserProps } from './components/ISpaceEraserProps';
 
 export interface ISpaceEraserWebPartProps {
-  description: string;
+  removeMargins: Boolean;
+  removePadding: Boolean;
 }
 
 export default class SpaceEraserWebPart extends BaseClientSideWebPart<ISpaceEraserWebPartProps> {
@@ -21,7 +24,9 @@ export default class SpaceEraserWebPart extends BaseClientSideWebPart<ISpaceEras
     const element: React.ReactElement<ISpaceEraserProps> = React.createElement(
       SpaceEraser,
       {
-        description: this.properties.description
+        displayMode: this.displayMode,
+        removeMargins: this.properties.removeMargins,
+        removePadding: this.properties.removePadding
       }
     );
 
@@ -36,6 +41,11 @@ export default class SpaceEraserWebPart extends BaseClientSideWebPart<ISpaceEras
     return Version.parse('1.0');
   }
 
+  protected onPropertyPaneFieldChanged(propertyPath: string, oldValue: any, newValue: any) {    
+    super.onPropertyPaneFieldChanged(propertyPath, oldValue, newValue);
+    this.render();
+  }
+
   protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
     return {
       pages: [
@@ -47,8 +57,11 @@ export default class SpaceEraserWebPart extends BaseClientSideWebPart<ISpaceEras
             {
               groupName: strings.BasicGroupName,
               groupFields: [
-                PropertyPaneTextField('description', {
-                  label: strings.DescriptionFieldLabel
+                PropertyPaneToggle('removeMargins', {
+                  label: strings.RemoveMarginsFieldLabel
+                }),
+                PropertyPaneToggle('removePadding', {
+                  label: strings.RemovePaddingFieldLabel
                 })
               ]
             }
